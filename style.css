@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap'); 
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    background: linear-gradient(to bottom, #E4F8FF 50%,#4285F8 50%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    overflow: hidden;
+    margin: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+    padding: 0 1rem;
+    width: 50px;
+    min-height: 50px;
+    transition:width .5s  linear;
+}
+nav.active{
+    width: 300px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 0;
+}
+li{
+    margin-inline: 0.6rem;
+    font-size: 0.9rem;
+    transition: 0.7s;
+    transform: rotateY(0deg);
+    transition:  0.6s linear;
+    opacity: 0;
+
+}
+nav.active ul li{
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+.icon{
+    cursor: pointer;
+}
+.icon div{
+    width: 20px;
+    height: 2px;
+    border-radius: 7px;
+    background-color: #4285F8;
+    margin-top: 5px;
+    transition: 0.7s linear;
+}
+nav.active ul{
+   /* display: flex; */
+   width: 100%;
+}
+
+
+nav.active .positive{
+    
+    transform:   rotateZ(765deg) ;
+}
+nav.active .negative{
+    transform: rotateZ(-765deg) translate(5px,-5px);
+ 
+}
